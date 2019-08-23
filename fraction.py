@@ -21,14 +21,6 @@ class Fraction:
             self.numerator = self.numerator*-1
             self.denominator = self.denominator*-1
 
-    def __add__(self, frac):
-        """Return the sum of two fractions as a new fraction.
-           Use the standard formula  a/b + c/d = (ad+bc)/(b*d)
-        """
-        new_numerator =  (self.numerator*frac.denominator + self.denominator*frac.numerator)
-        new_denominator = self.denominator*frac.denominator
-        return Fraction(new_numerator,new_denominator)
-
     def __str__(self):
         """Return the string of the fraction in the simpliest from.
         """
@@ -37,6 +29,21 @@ class Fraction:
         else:
             return f'{self.numerator}/{self.denominator}'
 
+    def __add__(self, frac):
+        """Return the sum of two fractions as a new fraction.
+           Use the standard formula  a/b + c/d = (ad+bc)/(b*d)
+        """
+        new_numerator =  (self.numerator*frac.denominator + self.denominator*frac.numerator)
+        new_denominator = self.denominator*frac.denominator
+        return Fraction(new_numerator,new_denominator)
+
+    def __sub__(self, frac):
+        """Return the subtraction of two fractions as a new fraction.
+        """
+        new_numerator =  (self.numerator*frac.denominator - self.denominator*frac.numerator)
+        new_denominator = self.denominator*frac.denominator
+        return Fraction(new_numerator,new_denominator)
+
     def __mul__(self, frac):
         """Return the multiplication of two fractions as a new fraction.
         """
@@ -44,18 +51,18 @@ class Fraction:
         mul_denominator = self.denominator*frac.denominator
         return Fraction(mul_numerator, mul_denominator)
 
-        
-
-
-    #TODO write __mul__ and __str__.  Verify __eq__ works with your code.
-   #Optional  have fun and overload other operators such as 
-    # __sub__ for f-g
-    # __gt__  for f > g
-    # __neg__ for -f (negation)``
-
     def __eq__(self, frac):
         """Two fractions are equal if they have the same value.
            Fractions are stored in proper form so the internal representation
            is unique (3/6 is same as 1/2).
         """
         return self.numerator == frac.numerator and self.denominator == frac.denominator
+
+    def __gt__(self, frac):
+        """Determined wheter """
+
+#TODO write __mul__ and __str__.  Verify __eq__ works with your code.
+   #Optional  have fun and overload other operators such as 
+    # __sub__ for f-g
+    # __gt__  for f > g
+    # __neg__ for -f (negation)``

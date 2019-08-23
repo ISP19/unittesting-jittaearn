@@ -10,19 +10,24 @@ by Jitta Koopratoomsiri.
 | empty list             |  empty list         |
 | one item               |  list with 1 item   |
 | one item many times    |  list with 1 item   |
-| large list             |  normal result      |
+| a large list           |  normal result      |
 | 2 items, many times, many orders | 2 item list, items in same order  |
 | not a list             |  raises TypeError   |
 | Many items, many times, many orders |  list with one duplicates of each  |
 
 ## Test Cases for Fraction
 
-| Test case(constructor)           |  Expected Result    |
+| Test case (__init__)   |  Expected Result    |
 |------------------------|---------------------|
 | empty list             |  empty list         |
 | one item               |  list with 1 item   |
 
-| Test case(operation)           |  Expected Result    |
+| Test case (__str__)    |  Expected Result    |
 |------------------------|---------------------|
-| empty list             |  empty list         |
-| one item               |  list with 1 item   |
+
+
+| Test case (__add__)    |  Expected Result    |
+|------------------------|---------------------|
+
+| Test case (__sub__)    |  Expected Result    |
+|------------------------|---------------------|
