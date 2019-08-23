@@ -29,9 +29,23 @@ class FractionTest(unittest.TestCase):
     # TODO Write tests for __init__, __eq__, +, *.
     # Here is an example, but you must add more test cases.  
     # The test requires that your __eq__ is correct.
+
+    def test_init(self):
+        with self.assertRaises(ZeroDivisionError):
+            Fraction(0, 0)
+
+
     def test_add(self):
         # 3/4 = 2/3 + 1/12
         self.assertEqual(Fraction(3,4), Fraction(1,12)+Fraction(2,3))
+        self.assertEqual(Fraction(5,8), Fraction(0,4)+Fraction(5,8))
+        self.assertEqual(Fraction(-13,-15), Fraction(-1,-5)+Fraction(2,3))
+
+    def test_mul(self):
+        self.assertEqual(Fraction(3,10), Fraction(1,2)*Fraction(3,5))
+        self.assertEqual(Fraction(4,6), Fraction(4,3)*Fraction(1,2))
+        self.assertEqual(Fraction(18,28), Fraction(6,7)*Fraction(3,4))
+        self.assertEqual(0, Fraction(0,2)*Fraction(8,4))
 
     def test_eq(self):
         f = Fraction(1,2)
@@ -43,3 +57,8 @@ class FractionTest(unittest.TestCase):
         self.assertFalse(f.__eq__(h))
         #TODO write more tests using other cases.
         # Consider special values like 0, 1/0, -1/0
+
+
+if __name__ == "__main__":
+    """Run the doctests in all methods."""
+    unittest.main()

@@ -11,13 +11,22 @@ def unique(list):
     >>> unique([5])
     [5]
     >>> unique(["b","a","a","b","b","b","a","a"])
-    ["b","a"]
+    ['b', 'a']
     >>> unique([])
     []
+    >>> unique(3)
+    Traceback (most recent call last):
+      ...
+    TypeError: 'int' is not a list
     """
-    pass   # remove this and write the actual code
+    new = []
+    for element in list:
+        if element not in new:
+            new.append(element)
+    return new
 
 if __name__ == "__main__":
     """Run the doctests in all methods."""
     import doctest
     doctest.testmod(verbose=True)
+
