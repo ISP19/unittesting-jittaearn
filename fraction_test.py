@@ -53,9 +53,9 @@ class FractionTest(unittest.TestCase):
     def test_mul(self):
         #Test the multiplication of two fraction. Example: 8/10 = 4/10 * 2*1
         self.assertEqual(Fraction(3,10), Fraction(1,2)*Fraction(3,5))
-        self.assertEqual(Fraction(4,6), Fraction(4,3)*Fraction(1,2))
-        self.assertEqual(Fraction(18,28), Fraction(6,7)*Fraction(3,4))
-        self.assertEqual(0, Fraction(0,2)*Fraction(8,4))
+        self.assertEqual(Fraction(4,6), Fraction(-4,3)*Fraction(-1,2))
+        self.assertEqual(Fraction(-18,28), Fraction(-6,7)*Fraction(3,4))
+        self.assertEqual(0, Fraction(0)*Fraction(8,4))
 
     def test_eq(self):
         #Test if the fractions are equal.

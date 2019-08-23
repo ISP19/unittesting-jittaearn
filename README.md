@@ -43,8 +43,13 @@ by Jitta Koopratoomsiri.
 | subtracting positive with negative fraction | positive result |
 | subtracting a fraction with zero  |    itself     |
 
-<!-- | Test case (__mul__)    |  Expected Result    |
-|------------------------|---------------------| -->
+| Test case (__mul__)    |  Expected Result    |
+|------------------------|---------------------|
+| multiply positive fraction  |  positive result |
+| multiply negative fraction  |  positive result |
+| multiply negative with positive fraction | negative result |
+| multiply fraction with zero  |       0       |
+
 <!-- 
 | Test case (__eq__)     |  Expected Result    |
 |------------------------|---------------------| -->
