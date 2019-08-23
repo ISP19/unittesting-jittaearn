@@ -48,7 +48,7 @@ class Fraction:
 
 
     #TODO write __mul__ and __str__.  Verify __eq__ works with your code.
-    #Optional have fun and overload other operators such as 
+   #Optional  have fun and overload other operators such as 
     # __sub__ for f-g
     # __gt__  for f > g
     # __neg__ for -f (negation)``

@@ -10,10 +10,19 @@ by Jitta Koopratoomsiri.
 | empty list             |  empty list         |
 | one item               |  list with 1 item   |
 | one item many times    |  list with 1 item   |
+| large list             |  normal result      |
 | 2 items, many times, many orders | 2 item list, items in same order  |
 | not a list             |  raises TypeError   |
-| what other test case?  |  what result?       |
-| what other test case?  |  what result?       |
-
+| Many items, many times, many orders |  list with one duplicates of each  |
 
 ## Test Cases for Fraction
+
+| Test case(constructor)           |  Expected Result    |
+|------------------------|---------------------|
+| empty list             |  empty list         |
+| one item               |  list with 1 item   |
+
+| Test case(operation)           |  Expected Result    |
+|------------------------|---------------------|
+| empty list             |  empty list         |
+| one item               |  list with 1 item   |

@@ -1,4 +1,4 @@
-def unique(list):
+def unique(lst):
     """Return a list containing only the first occurence of each distint
        element in list.  That is, all duplicates are omitted.
 
@@ -14,16 +14,14 @@ def unique(list):
     ['b', 'a']
     >>> unique([])
     []
-    >>> unique(3)
-    Traceback (most recent call last):
-      ...
-    TypeError: 'int' is not a list
     """
-    new = []
-    for element in list:
-        if element not in new:
-            new.append(element)
-    return new
+    if not isinstance(lst, list):
+        raise TypeError
+    new_list = []
+    for element in lst:
+        if element not in new_list:
+            new_list.append(element)
+    return new_list
 
 if __name__ == "__main__":
     """Run the doctests in all methods."""
