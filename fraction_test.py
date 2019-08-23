@@ -37,15 +37,18 @@ class FractionTest(unittest.TestCase):
 
     def test_add(self):
         #Test addition of two fraction. Example: 3/4 = 2/3 + 1/12.
-        self.assertEqual(Fraction(3,4), Fraction(1,12)+Fraction(2,3))
+        self.assertEqual(Fraction(3,4), Fraction(1,12) + Fraction(2,3))
         self.assertEqual(Fraction(-2,5), Fraction(-1,5) + Fraction(-2,10))
         self.assertEqual(Fraction(1,14), Fraction(4,7) + Fraction(-3,6))
         self.assertEqual(Fraction(-1,8), Fraction(3,8) + Fraction(-1,2))
         self.assertEqual(Fraction(6,20), Fraction(6,20) + Fraction(0))
 
     def test_sub(self):
-        #Test subtraction of two fraction. Example: 1/2 = 1/2-1/4.
-        pass
+        self.assertEqual(Fraction(-7,12), Fraction(1,12) - Fraction(2,3))
+        self.assertEqual(Fraction(0), Fraction(-1,5) - Fraction(-2,10))
+        self.assertEqual(Fraction(15,14), Fraction(4,7) - Fraction(-3,6))
+        self.assertEqual(Fraction(7,8), Fraction(3,8) - Fraction(-1,2))
+        self.assertEqual(Fraction(11,22), Fraction(11,22) - Fraction(0))
 
     def test_mul(self):
         #Test the multiplication of two fraction. Example: 8/10 = 4/10 * 2*1

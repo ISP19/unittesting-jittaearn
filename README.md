@@ -35,8 +35,13 @@ by Jitta Koopratoomsiri.
 | adding negative and positive fraction | negative result if negative fraction is larger than that of positive |
 | adding a fraction with zero  |    itself     |
 
-<!-- | Test case (__sub__)    |  Expected Result    |
-|------------------------|---------------------| -->
+| Test case (__sub__)    |  Expected Result    |
+|------------------------|---------------------|
+| subtracting positive fraction  |  negative if the second fraction is larger than the first, otherwise positive |
+| subtracting negative fraction  |  negative result |
+| subtracting negative with positive fraction | negative result |
+| subtracting positive with negative fraction | positive result |
+| subtracting a fraction with zero  |    itself     |
 
 <!-- | Test case (__mul__)    |  Expected Result    |
 |------------------------|---------------------| -->
