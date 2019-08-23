@@ -8,8 +8,12 @@ class FractionTest(unittest.TestCase):
     """Test the methods and constructor of the Fraction class. """
 
     def test_init(self):
-        with self.assertRaises(ZeroDivisionError):
-            Fraction(0, 0)
+        with self.assertRaises(TypeError):
+            Fraction("hi",3)
+        with self.assertRaises(TypeError):
+            Fraction(2,"Hello")
+        with self.assertRaises(TypeError):
+            Fraction("bear","wolf")
 
     def test_str(self):
         f = Fraction(3, -1)

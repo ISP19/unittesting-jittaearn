@@ -29,8 +29,7 @@ class ListutilTest(unittest.TestCase):
     def test_not_a_list(self):
         #Raises TypeError.
         with self.assertRaises(TypeError):
-            uni = unique('str')
-
+            unique("hi",3)
 
 if __name__ == "__main__":
     """Run the doctests in all methods."""

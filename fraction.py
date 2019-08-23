@@ -14,6 +14,11 @@ class Fraction:
         """Initialize a new fraction with the given numerator
            and denominator (default 1).
         """ 
+        if not isinstance(numerator, int):
+            raise TypeError("Please input an integer")
+        if not isinstance(denominator, int):
+            raise TypeError("Please input an integer")
+
         gcd = math.gcd(numerator, denominator)
         self.numerator = int(numerator/gcd)
         self.denominator = int(denominator/gcd)

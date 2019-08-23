@@ -17,15 +17,15 @@ by Jitta Koopratoomsiri.
 
 ## Test Cases for Fraction
 
-<!-- | Test case (__init__)   |  Expected Result    |
+| Test case (__init__)   |  Expected Result    |
 |------------------------|---------------------|
-| not an integer or float   |  raises TypeError   |
+| not an integer         |  raises TypeError   |
+
+<!-- | Test case (__str__)    |  Expected Result    |
+|------------------------|---------------------|
 | zero as a numerator    |  fraction is equal to zero  |
 | zero as a denominator  |                     |
 | zero as both numerator and denominator |  list with 1 item   | -->
-
-<!-- | Test case (__str__)    |  Expected Result    |
-|------------------------|---------------------| -->
 
 
 | Test case (__add__)    |  Expected Result    |
