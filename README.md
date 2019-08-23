@@ -13,7 +13,7 @@ by Jitta Koopratoomsiri.
 | a large list           |  normal result      |
 | 2 items, many times, many orders | 2 item list, items in same order  |
 | not a list             |  raises TypeError   |
-| Many items, many times, many orders |  list with one duplicates of each  |
+| Many items, many times, many teorders |  list with one duplicates of each  |
 
 ## Test Cases for Fraction
 
@@ -52,11 +52,11 @@ by Jitta Koopratoomsiri.
 | multiply negative with positive fraction | negative result |
 | multiply fraction with zero  |       0       |
 
-<!-- 
+
 | Test case (__eq__)     |  Expected Result    |
 |------------------------|---------------------|
-| simplest form          |        Equal        |
-| subtracting negative fr|      Not Equal      | -->
+| same simplest form     |        Equal        |
+| different simplest form  |      Not Equal      |
 
 
 | Test case (__gt__)     |  Expected Result    |

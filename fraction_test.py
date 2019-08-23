@@ -66,8 +66,10 @@ class FractionTest(unittest.TestCase):
         self.assertTrue(f.__eq__(g))  # same thing
         self.assertFalse(f == h)
         self.assertFalse(f.__eq__(h))
-        #TODO write more tests using other cases.
-        # Consider special values like 0, 1/0, -1/0
+        self.assertNotEqual(Fraction(1,0), Fraction(-1,0))
+        self.assertEqual(Fraction(1,0), Fraction(1,0))
+        self.assertEqual(Fraction(0), Fraction(0))
+        self.assertEqual(Fraction(-1,0), Fraction(-1,0))
 
     def test_gt(self):
         #Test wheter if the first fraction is greater than the second fraction.
