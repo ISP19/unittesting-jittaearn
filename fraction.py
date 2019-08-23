@@ -15,10 +15,10 @@ class Fraction:
            and denominator (default 1).
         """ 
         #check type of input 
-        if not isinstance(numerator, int):
-            raise TypeError("Please input an integer")
-        if not isinstance(denominator, int):
-            raise TypeError("Please input an integer")
+        if isinstance(numerator, float)  or not isinstance(numerator, int):
+            raise TypeError
+        if isinstance(denominator, float) or not isinstance(denominator, int):
+            raise TypeError
 
         #check 0/0
         if numerator == 0 and denominator == 0:

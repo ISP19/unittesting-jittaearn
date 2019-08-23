@@ -16,6 +16,7 @@ class FractionTest(unittest.TestCase):
             Fraction("bear","wolf")
 
     def test_str(self):
+        #Test the string format of the fraction
         f = Fraction(3, -1)
         self.assertEqual("-3", f.__str__())
         f = Fraction(0, 5)
@@ -34,7 +35,7 @@ class FractionTest(unittest.TestCase):
         f = Fraction(99)
         self.assertEqual("99", f.__str__())
         f = Fraction(0,10)
-        self.assertEqual("0'10", f.__str__())
+        self.assertEqual("0", f.__str__())
         f = Fraction(0,0)
         self.assertEqual("0/0", f.__str__())
         f = Fraction(1,0)
