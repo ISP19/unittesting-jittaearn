@@ -44,6 +44,7 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(Fraction(6,20), Fraction(6,20) + Fraction(0))
 
     def test_sub(self):
+        #Test subtraction of two fraction. Example: 1/4 = 1/2 - 1/4.
         self.assertEqual(Fraction(-7,12), Fraction(1,12) - Fraction(2,3))
         self.assertEqual(Fraction(0), Fraction(-1,5) - Fraction(-2,10))
         self.assertEqual(Fraction(15,14), Fraction(4,7) - Fraction(-3,6))
@@ -58,7 +59,7 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(0, Fraction(0)*Fraction(8,4))
 
     def test_eq(self):
-        #Test if the fractions are equal.
+        #Test if the fractions in simplest form are equal.
         f = Fraction(1,2)
         g = Fraction(-40,-80)
         h = Fraction(10000,20001) # not quite 1/2
@@ -71,7 +72,13 @@ class FractionTest(unittest.TestCase):
 
     def test_gt(self):
         #Test wheter if the first fraction is greater than the second fraction.
-        pass
+        f = Fraction(1,2)
+        g = Fraction(1,4)
+        h = Fraction(1,4)
+        i = Fraction(3,4)
+        self.assertTrue(f.__gt__(g))
+        self.assertFalse(f.__gt__(i))
+        self.assertFalse(g.__gt__(h))
 
     def test_neg(self):
         #Test if the fraction is negated.

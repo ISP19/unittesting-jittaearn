@@ -65,7 +65,7 @@ class Fraction:
         second_fraction = frac.numerator/frac.denominator
         if first_fraction > second_fraction:
             return True
-        False
+        return False
 
     def __neg__(self):
         """Return object negated."""

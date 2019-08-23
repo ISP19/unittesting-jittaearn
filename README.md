@@ -35,6 +35,7 @@ by Jitta Koopratoomsiri.
 | adding negative and positive fraction | negative result if negative fraction is larger than that of positive |
 | adding a fraction with zero  |    itself     |
 
+
 | Test case (__sub__)    |  Expected Result    |
 |------------------------|---------------------|
 | subtracting positive fraction  |  negative if the second fraction is larger than the first, otherwise positive |
@@ -43,6 +44,7 @@ by Jitta Koopratoomsiri.
 | subtracting positive with negative fraction | positive result |
 | subtracting a fraction with zero  |    itself     |
 
+
 | Test case (__mul__)    |  Expected Result    |
 |------------------------|---------------------|
 | multiply positive fraction  |  positive result |
@@ -50,12 +52,20 @@ by Jitta Koopratoomsiri.
 | multiply negative with positive fraction | negative result |
 | multiply fraction with zero  |       0       |
 
-<!-- 
-| Test case (__eq__)     |  Expected Result    |
-|------------------------|---------------------| -->
 
-<!-- | Test case (__gt__)     |  Expected Result    |
-|------------------------|---------------------| -->
+| Test case (__eq__)     |  Expected Result    |
+|------------------------|---------------------|
+| simplest form          |        Equal        |
+| subtracting negative fr|      Not Equal      |
+
+
+| Test case (__gt__)     |  Expected Result    |
+|------------------------|---------------------|
+| first fraction is greater than the second  |        True         |
+| first fraction is smaller than the second  |        False        |
+| equal fraction         |        False        |
+
+
 <!-- 
 | Test case (__neg__)    |  Expected Result    |
 |------------------------|---------------------| -->
