@@ -7,6 +7,10 @@ from fraction import Fraction
 class FractionTest(unittest.TestCase):
     """Test the methods and constructor of the Fraction class. """
 
+    def test_init(self):
+        with self.assertRaises(ZeroDivisionError):
+            Fraction(0, 0)
+
     def test_str(self):
         f = Fraction(3, -1)
         self.assertEqual("-3", f.__str__())
@@ -30,24 +34,28 @@ class FractionTest(unittest.TestCase):
     # Here is an example, but you must add more test cases.  
     # The test requires that your __eq__ is correct.
 
-    def test_init(self):
-        with self.assertRaises(ZeroDivisionError):
-            Fraction(0, 0)
-
 
     def test_add(self):
-        # 3/4 = 2/3 + 1/12
+        #Test addition of two fraction. Example: 3/4 = 2/3 + 1/12.
         self.assertEqual(Fraction(3,4), Fraction(1,12)+Fraction(2,3))
-        self.assertEqual(Fraction(5,8), Fraction(0,4)+Fraction(5,8))
-        self.assertEqual(Fraction(-13,-15), Fraction(-1,-5)+Fraction(2,3))
+        self.assertEqual(Fraction(-2,5), Fraction(-1,5) + Fraction(-2,10))
+        self.assertEqual(Fraction(1,14), Fraction(4,7) + Fraction(-3,6))
+        self.assertEqual(Fraction(-1,8), Fraction(3,8) + Fraction(-1,2))
+        self.assertEqual(Fraction(6,20), Fraction(6,20) + Fraction(0))
+
+    def test_sub(self):
+        #Test subtraction of two fraction. Example: 1/2 = 1/2-1/4.
+        pass
 
     def test_mul(self):
+        #Test the multiplication of two fraction. Example: 8/10 = 4/10 * 2*1
         self.assertEqual(Fraction(3,10), Fraction(1,2)*Fraction(3,5))
         self.assertEqual(Fraction(4,6), Fraction(4,3)*Fraction(1,2))
         self.assertEqual(Fraction(18,28), Fraction(6,7)*Fraction(3,4))
         self.assertEqual(0, Fraction(0,2)*Fraction(8,4))
 
     def test_eq(self):
+        #Test if the fractions are equal.
         f = Fraction(1,2)
         g = Fraction(-40,-80)
         h = Fraction(10000,20001) # not quite 1/2
@@ -57,6 +65,14 @@ class FractionTest(unittest.TestCase):
         self.assertFalse(f.__eq__(h))
         #TODO write more tests using other cases.
         # Consider special values like 0, 1/0, -1/0
+
+    def test_gt(self):
+        #Test wheter if the first fraction is greater than the second fraction.
+        pass
+
+    def test_neg(self):
+        #Test if the fraction is negated.
+        pass
 
 
 if __name__ == "__main__":

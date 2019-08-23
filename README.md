@@ -17,17 +17,38 @@ by Jitta Koopratoomsiri.
 
 ## Test Cases for Fraction
 
-| Test case (__init__)   |  Expected Result    |
+<!-- | Test case (__init__)   |  Expected Result    |
 |------------------------|---------------------|
-| empty list             |  empty list         |
-| one item               |  list with 1 item   |
+| not an integer or float   |  raises TypeError   |
+| zero as a numerator    |  fraction is equal to zero  |
+| zero as a denominator  |                     |
+| zero as both numerator and denominator |  list with 1 item   | -->
 
-| Test case (__str__)    |  Expected Result    |
-|------------------------|---------------------|
+<!-- | Test case (__str__)    |  Expected Result    |
+|------------------------|---------------------| -->
 
 
 | Test case (__add__)    |  Expected Result    |
 |------------------------|---------------------|
+| adding positive fraction  |  positive result |
+| adding negative fraction  |  negative result |
+| adding negative and positive fraction | negative result if negative fraction is larger than that of positive |
+| adding a fraction with zero  |    itself     |
 
-| Test case (__sub__)    |  Expected Result    |
-|------------------------|---------------------|
+<!-- | Test case (__sub__)    |  Expected Result    |
+|------------------------|---------------------| -->
+
+<!-- | Test case (__mul__)    |  Expected Result    |
+|------------------------|---------------------| -->
+<!-- 
+| Test case (__eq__)     |  Expected Result    |
+|------------------------|---------------------| -->
+
+<!-- | Test case (__gt__)     |  Expected Result    |
+|------------------------|---------------------| -->
+<!-- 
+| Test case (__neg__)    |  Expected Result    |
+|------------------------|---------------------| -->
+
+
+

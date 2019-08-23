@@ -39,6 +39,7 @@ class Fraction:
 
     def __sub__(self, frac):
         """Return the subtraction of two fractions as a new fraction.
+           Use the standard formula  a/b - c/d = (ad-bc)/(b*d)
         """
         new_numerator =  (self.numerator*frac.denominator - self.denominator*frac.numerator)
         new_denominator = self.denominator*frac.denominator
@@ -59,10 +60,13 @@ class Fraction:
         return self.numerator == frac.numerator and self.denominator == frac.denominator
 
     def __gt__(self, frac):
-        """Determined wheter """
+        """Determined wheter which fraction is greater."""
+        first_fraction = self.numerator/self.denominator 
+        second_fraction = frac.numerator/frac.denominator
+        if first_fraction > second_fraction:
+            return True
+        False
 
-#TODO write __mul__ and __str__.  Verify __eq__ works with your code.
-   #Optional  have fun and overload other operators such as 
-    # __sub__ for f-g
-    # __gt__  for f > g
-    # __neg__ for -f (negation)``
+    def __neg__(self):
+        """Return object negated."""
+        return Fraction(-1*self.numerator, self.denominator)
