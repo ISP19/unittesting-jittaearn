@@ -30,11 +30,6 @@ class FractionTest(unittest.TestCase):
         f = Fraction(99)
         self.assertEqual("99", f.__str__())
 
-    # TODO Write tests for __init__, __eq__, +, *.
-    # Here is an example, but you must add more test cases.  
-    # The test requires that your __eq__ is correct.
-
-
     def test_add(self):
         #Test addition of two fraction. Example: 3/4 = 2/3 + 1/12.
         self.assertEqual(Fraction(3,4), Fraction(1,12) + Fraction(2,3))
@@ -59,7 +54,7 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(0, Fraction(0)*Fraction(8,4))
 
     def test_eq(self):
-        #Test if the fractions in simplest form are equal.
+        #Test if the fractions in simplest form are equal. 
         f = Fraction(1,2)
         g = Fraction(-40,-80)
         h = Fraction(10000,20001) # not quite 1/2
@@ -82,7 +77,10 @@ class FractionTest(unittest.TestCase):
 
     def test_neg(self):
         #Test if the fraction is negated.
-        pass
+        self.assertEqual(Fraction(-2,5), -Fraction(2,5))
+        self.assertEqual(Fraction(5,12), -Fraction(-5,12))
+        self.assertEqual(0, -Fraction(0)) 
+        
 
 
 if __name__ == "__main__":

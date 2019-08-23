@@ -52,11 +52,11 @@ by Jitta Koopratoomsiri.
 | multiply negative with positive fraction | negative result |
 | multiply fraction with zero  |       0       |
 
-
+<!-- 
 | Test case (__eq__)     |  Expected Result    |
 |------------------------|---------------------|
 | simplest form          |        Equal        |
-| subtracting negative fr|      Not Equal      |
+| subtracting negative fr|      Not Equal      | -->
 
 
 | Test case (__gt__)     |  Expected Result    |
@@ -66,9 +66,12 @@ by Jitta Koopratoomsiri.
 | equal fraction         |        False        |
 
 
-<!-- 
+
 | Test case (__neg__)    |  Expected Result    |
-|------------------------|---------------------| -->
+|------------------------|---------------------|
+| positive fraction      |  negative fraction  |
+| negative fraction      |  positive fraction  |
+| zero                   |  zero               |
 
 
 
