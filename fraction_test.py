@@ -33,6 +33,12 @@ class FractionTest(unittest.TestCase):
         # Constructor should provide default denominator = 1
         f = Fraction(99)
         self.assertEqual("99", f.__str__())
+        f = Fraction(0,10)
+        self.assertEqual("0'10", f.__str__())
+        f = Fraction(0,0)
+        self.assertEqual("0/0", f.__str__())
+        f = Fraction(1,0)
+        self.assertEqual("1/0", f.__str__())
 
     def test_add(self):
         #Test addition of two fraction. Example: 3/4 = 2/3 + 1/12.

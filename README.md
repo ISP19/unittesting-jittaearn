@@ -21,11 +21,12 @@ by Jitta Koopratoomsiri.
 |------------------------|---------------------|
 | not an integer         |  raises TypeError   |
 
-<!-- | Test case (__str__)    |  Expected Result    |
+| Test case (__str__)    |  Expected Result    |
 |------------------------|---------------------|
 | zero as a numerator    |  fraction is equal to zero  |
-| zero as a denominator  |                     |
-| zero as both numerator and denominator |  list with 1 item   | -->
+| zero as a denominator  |     numerator/ 0    |
+| zero as both numerator and denominator |        0/0       |
+
 
 
 | Test case (__add__)    |  Expected Result    |

@@ -14,23 +14,32 @@ class Fraction:
         """Initialize a new fraction with the given numerator
            and denominator (default 1).
         """ 
+        #check type of input 
         if not isinstance(numerator, int):
             raise TypeError("Please input an integer")
         if not isinstance(denominator, int):
             raise TypeError("Please input an integer")
 
-        gcd = math.gcd(numerator, denominator)
-        self.numerator = int(numerator/gcd)
-        self.denominator = int(denominator/gcd)
-        if self.denominator < 0:
-            self.numerator = self.numerator*-1
-            self.denominator = self.denominator*-1
+        #check 0/0
+        if numerator == 0 and denominator == 0:
+            self.numerator = 0
+            self.denominator = 0
+
+        #check simpliest form 
+        else:
+            gcd = math.gcd(numerator, denominator)
+            self.numerator = int(numerator/gcd)
+            self.denominator = int(denominator/gcd)
+            if self.denominator < 0:
+                self.numerator = self.numerator*-1
+                self.denominator = self.denominator*-1
 
     def __str__(self):
-        """Return the string of the fraction in the simpliest from.
-        """
+        """Return the string of the fraction in the simpliest from."""
         if self.denominator == 1:
             return f'{self.numerator}'
+        elif self.numerator == 0 and self.denominator == 0:
+            return f'0/0'
         else:
             return f'{self.numerator}/{self.denominator}'
 
