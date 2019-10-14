@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/jittaearn/unittesting.svg?branch=master)](https://travis-ci.com/jittaearn/unittesting)
+[![Build Status](https://travis-ci.com/jittaearn/unittesting-jittaearn.svg?branch=master)](https://travis-ci.com/jittaearn/unittesting-jittaearn)
 ## Unit Testing Assignment
 
 by Jitta Koopratoomsiri.
