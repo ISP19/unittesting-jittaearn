@@ -33,4 +33,4 @@ class ListutilTest(unittest.TestCase):
 
 if __name__ == "__main__":
     """Run the doctests in all methods."""
-    unittest.main()
+    unittest.main(verbosity=2)
