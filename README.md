@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/jittaearn/unittesting.svg?branch=master)](https://travis-ci.com/jittaearn/unittesting) codecov
+[![Build Status](https://travis-ci.com/jittaearn/unittesting.svg?branch=master)](https://travis-ci.com/jittaearn/unittesting)
+[![codecov](https://codecov.io/gh/jittaearn/unittesting/branch/master/graph/badge.svg)](https://codecov.io/gh/jittaearn/unittesting)
 ## Unit Testing Assignment
 
 by Jitta Koopratoomsiri.

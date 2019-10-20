@@ -10,13 +10,11 @@
  install:
    - pip install -r requirements.txt
    - pip install codecov
-
- CODECOV_TOKEN="1cdafa3b-33c9-40bb-bc80-942c2d86a25c"
     
  # script to run tests. Script can have many commands, one per line.
  script: 
-  #  - python -m unittest discover -p "*_test.py"  
-   - (run your unit tests with "coverage" to generate code coverage data)
+   - python -m unittest discover -p "*_test.py"
+   - coverage run fraction_test.py
 
  after_success:
   - codecov
